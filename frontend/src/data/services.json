@@ -1,0 +1,86 @@
+[
+  {
+    "id": "fire-security",
+    "title": "Fire Detection & Security Integration",
+    "excerpt": "Smart fire detection, alarm systems, CCTV, and IP Surveillance for mission-critical infrastructure.",
+    "category": "Life Safety & Security",
+    "image": "/hero.png",
+    "features": [
+      "Addressable Fire Alarms & Suppression",
+      "CCTV & IP Surveillance",
+      "Biometric & Access Control Systems",
+      "RFID Systems Integration"
+    ],
+    "description": "We design and deploy code-compliant fire detection and advanced security integrations that reduce risk while improving response time. Our turnkey execution includes design, supply, installation, testing and commissioning."
+  },
+  {
+    "id": "networking-comm",
+    "title": "Networking & Communication",
+    "excerpt": "Enterprise-grade LAN, WAN, WiFi systems, and unified communications including PA systems and EPABX.",
+    "category": "IT Infrastructure",
+    "image": "/hero.png",
+    "features": [
+      "LAN, WAN, & Wi-Fi Systems",
+      "R-F Connectivity for P2P/MP2P",
+      "U.T.M Firewall & Data Security",
+      "PA Systems, EPABX, Voice & Video"
+    ],
+    "description": "We engineer fast, scalable networking backbones and unified communication systems for offices, campuses, and industrial locations, built for low latency and secure design."
+  },
+  {
+    "id": "bms",
+    "title": "Building Management Systems",
+    "excerpt": "Intelligent automated control of a facility's MEP systems such as heating, ventilation, and lighting.",
+    "category": "Facility Management",
+    "image": "/hero.png",
+    "features": [
+      "Centralized HVAC Control",
+      "Lighting & Energy Management",
+      "Real-time Monitoring & Alerts",
+      "Integration with Security Systems"
+    ],
+    "description": "Our Building Management Systems (BMS) provide centralized control over your facility's critical infrastructure, optimizing energy usage and operational efficiency."
+  },
+  {
+    "id": "electrical-hvac",
+    "title": "Electrical & HVAC Engineering",
+    "excerpt": "Integrated electrical and HVAC solutions tailored for reliability and energy efficiency.",
+    "category": "MEP Operations",
+    "image": "/hero.png",
+    "features": [
+      "Expert Electrical works",
+      "HVAC system design & execution",
+      "Power distribution & LT panels",
+      "Preventive maintenance support"
+    ],
+    "description": "We deliver performance-first electrical works and HVAC implementations that support continuous operations, supported by specialized electrical and mechanical engineering expertise."
+  },
+  {
+    "id": "civil-interior",
+    "title": "Civil Work & Interior Design",
+    "excerpt": "Site planning, execution consulting, interior design, and turnkey civil support for integrated projects.",
+    "category": "Consultancy & Civil",
+    "image": "/hero.png",
+    "features": [
+      "Consultancy of Project Civil Work",
+      "Comprehensive Interior Design",
+      "Execution planning & supervision",
+      "Vendor coordination & handover"
+    ],
+    "description": "Our civil engineering and interior design consultancy team aligns structural requirements, vendors, and precise timelines to ensure smooth execution from concept to handover."
+  },
+  {
+    "id": "horticulture",
+    "title": "Horticulture Maintenance",
+    "excerpt": "Specialized horticulture maintenance and development for pristine campus environments.",
+    "category": "Facility Maintenance",
+    "image": "/hero.png",
+    "features": [
+      "Landscape Architecture",
+      "Routine Horticulture Maintenance",
+      "Campus Greening Development",
+      "Eco-friendly irrigation systems"
+    ],
+    "description": "Beyond technical infrastructure, we provide extensive horticulture maintenance and development to ensure your facilities maintain an aesthetic, natural, and sustainable environment."
+  }
+]

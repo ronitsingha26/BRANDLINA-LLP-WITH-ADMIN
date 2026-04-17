@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "future-of-integrated-security-systems",
+    "title": "The Future of Integrated Security Systems",
+    "excerpt": "Why modern facilities are shifting toward unified platforms for safety, surveillance and control.",
+    "cover": "/hero.png",
+    "author": "Brandlina Editorial",
+    "publishedAt": "2026-01-18",
+    "tags": ["Security", "CCTV", "Access Control"],
+    "content": [
+      "Integrated systems reduce operational friction by connecting surveillance, access control and incident response in one workflow.",
+      "As organizations scale, central visibility and automation become critical to maintain compliance and uptime.",
+      "The right architecture balances performance, security and maintainability over the long term."
+    ]
+  },
+  {
+    "slug": "network-design-checklist-for-industrial-sites",
+    "title": "Network Design Checklist for Industrial Sites",
+    "excerpt": "A practical framework to build reliable network infrastructure for high-load industrial environments.",
+    "cover": "/hero.png",
+    "author": "Engineering Team",
+    "publishedAt": "2026-02-09",
+    "tags": ["Networking", "LAN/WAN", "WiFi"],
+    "content": [
+      "Industrial networks need deterministic performance, strong segmentation and predictable failover.",
+      "A site survey and proper capacity modeling at the start can eliminate most late-stage redesign issues.",
+      "Lifecycle operations should include proactive monitoring and periodic security hardening."
+    ]
+  },
+  {
+    "slug": "fire-safety-compliance-essentials",
+    "title": "Fire Safety Compliance Essentials",
+    "excerpt": "What every facility manager should know before the next safety audit.",
+    "cover": "/hero.png",
+    "author": "Safety Desk",
+    "publishedAt": "2026-03-04",
+    "tags": ["Fire Systems", "Compliance"],
+    "content": [
+      "Compliance starts with correct system design and standards mapping before installation begins.",
+      "Periodic drills, detector health checks and documentation readiness are just as important as hardware quality.",
+      "A proactive maintenance schedule helps teams stay audit-ready year round."
+    ]
+  }
+]

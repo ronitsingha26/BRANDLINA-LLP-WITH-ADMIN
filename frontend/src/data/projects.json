@@ -1,0 +1,86 @@
+[
+  {
+    "id": "ranchi-campus-modernization",
+    "title": "Ranchi Campus Modernization Block",
+    "category": "Infrastructure",
+    "location": "Ranchi, Jharkhand",
+    "cover": "/projects/building-exterior-02.jpg",
+    "gallery": [
+      "/projects/building-exterior-02.jpg",
+      "/projects/facade-works-01.jpg",
+      "/projects/civil-works-01.jpg"
+    ],
+    "description": "Complete civil, facade, and MEP modernization for an institutional campus utility block including execution planning, coordination, and final handover support.",
+    "outcome": "Delivered before monsoon milestone with zero safety incidents"
+  },
+  {
+    "id": "logistics-network-core",
+    "title": "Logistics Park Network Core",
+    "category": "Networking",
+    "location": "Jamshedpur, Jharkhand",
+    "cover": "/projects/network-ops-01.jpg",
+    "gallery": [
+      "/projects/network-ops-01.jpg",
+      "/projects/it-rack-01.jpg",
+      "/projects/control-room-01.jpg"
+    ],
+    "description": "Designed and commissioned a high-availability LAN/WAN backbone across logistics sheds, admin blocks, and loading zones with secure wireless coverage.",
+    "outcome": "99.95% measured uptime in first quarter"
+  },
+  {
+    "id": "manufacturing-fire-grid",
+    "title": "Manufacturing Fire Safety Grid",
+    "category": "Fire",
+    "location": "Bokaro, Jharkhand",
+    "cover": "/projects/industrial-safety-01.jpg",
+    "gallery": [
+      "/projects/industrial-safety-01.jpg",
+      "/projects/hvac-ducting-01.jpg",
+      "/projects/control-room-01.jpg"
+    ],
+    "description": "Implemented detection, alarm, and suppression-ready infrastructure across multi-zone production floors with integrated emergency notifications.",
+    "outcome": "Passed compliance audit on first inspection"
+  },
+  {
+    "id": "city-command-surveillance",
+    "title": "City Command Surveillance Stack",
+    "category": "CCTV",
+    "location": "Dhanbad, Jharkhand",
+    "cover": "/projects/control-room-01.jpg",
+    "gallery": [
+      "/projects/control-room-01.jpg",
+      "/projects/corporate-campus-01.jpg",
+      "/projects/facade-works-01.jpg"
+    ],
+    "description": "Deployed CCTV and access integration with centralized monitoring dashboards, recording policies, and alert workflows for urban operations teams.",
+    "outcome": "Unified monitoring and event traceability across zones"
+  },
+  {
+    "id": "auditorium-interior-systems",
+    "title": "Auditorium Interior and AV Readiness",
+    "category": "Infrastructure",
+    "location": "Hazaribagh, Jharkhand",
+    "cover": "/projects/interior-fitout-01.jpg",
+    "gallery": [
+      "/projects/interior-fitout-01.jpg",
+      "/projects/hvac-ducting-01.jpg",
+      "/projects/civil-works-01.jpg"
+    ],
+    "description": "Executed ceiling, acoustic-ready infrastructure, electrical routing, and coordinated fitout activities to prepare a large-capacity auditorium block.",
+    "outcome": "Ready-for-commissioning handover within planned timeline"
+  },
+  {
+    "id": "corporate-hq-security-bms",
+    "title": "Corporate HQ Security and BMS Layer",
+    "category": "Networking",
+    "location": "Ranchi, Jharkhand",
+    "cover": "/projects/corporate-campus-01.jpg",
+    "gallery": [
+      "/projects/corporate-campus-01.jpg",
+      "/projects/it-rack-01.jpg",
+      "/projects/building-exterior-02.jpg"
+    ],
+    "description": "Integrated enterprise networking, monitored access points, and BMS-aligned control room workflows for a multi-block corporate campus.",
+    "outcome": "Reduced outage calls by 32% in first two months"
+  }
+]

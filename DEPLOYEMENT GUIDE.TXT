@@ -1,0 +1,118 @@
+Comprehensive Deployment Guide: Hostinger
+This guide covers everything you need to know about the tools used in this project and the exact steps to deploy both the frontend and backend to Hostinger in an optimized production environment.
+
+🛠️ Tech Stack & Tools Used
+Before deploying, here is a detailed breakdown of the complete technology stack used in your application:
+
+Frontend (Client-side)
+
+Framework: React.js (v19) powered by Vite (for ultra-fast development and optimized production bundling).
+Styling: Tailwind CSS v4 (for rapid, responsive UI design).
+Animations: GSAP & Framer Motion (for smooth, high-performance web animations).
+3D Graphics: React Three Fiber & Drei (for rendering 3D models like the globe).
+Charts/Data: Recharts (for dashboard analytics visualisations).
+Routing: React Router v7 (for single-page navigation).
+Backend (Server-side)
+
+Runtime: Node.js.
+Framework: Express.js (handling API routes, requests, and responses).
+Authentication: JSON Web Tokens (JWT) & bcryptjs (for encrypted passwords and secure sessions).
+Security & Optimization: Helmet (for setting secure HTTP headers) and Compression (for zipping API responses). (I have just added these optimisations into your backend!)
+File Uploads: Multer (handling local system file uploads) & Cloudinary (remote media storage).
+Database (Data Layer)
+
+Database: MongoDB (A NoSQL, highly scalable document database).
+ORM/ODM: Mongoose (Used to manage data relationships, provide schema validation, and translate between objects in code and the representation of those objects in MongoDB).
+IMPORTANT
+
+Hostinger Prerequisites To run a MERN stack (Node.js + React + MongoDB) optimally, it is highly recommended to use Hostinger VPS Hosting or a Cloud Hosting plan that explicitly supports Node.js applications. Standard shared web hosting is primarily designed for PHP/WordPress and lacks the terminal access needed for Node.js apps.
+
+🗄️ Step 1: Database Setup (MongoDB)
+You have two options for your database:
+
+Hostinger VPS Local DB: You can install MongoDB directly on your Hostinger VPS.
+MongoDB Atlas (Highly Recommended): This is a free, managed cloud database by MongoDB. It is the industry standard for production MERN apps.
+Using MongoDB Atlas:
+
+Go to MongoDB Atlas and create a free cluster.
+Under "Database Access", create a new database user with a secure password.
+Under "Network Access", add 0.0.0.0/0 to allow connections from anywhere (or restrict it to your Hostinger server's IP address).
+Click "Connect", choose "Connect your application", and copy the Connection String. It will look like this: mongodb+srv://<username>:<password>@cluster0.abcde.mongodb.net/brandlina?retryWrites=true&w=majority
+⚙️ Step 2: Backend Deployment (Node.js/Express)
+Your backend needs to be kept running 24/7 on the server.
+
+1. Prepare Backend for Production
+In your project, make sure the backend/ folder contains only the necessary source code.
+Open your terminal on your local machine and commit any changes. I have already optimized the app.js file for production by adding helmet and compression.
+2. Upload to Hostinger Via SSH
+Connect to your Hostinger VPS via SSH (using Terminal on Mac or PuTTY on Windows): ssh root@your_hostinger_ip
+Install Node.js and npm on the server if not already installed:
+bash
+sudo apt update
+sudo apt install nodejs npm
+Transfer your backend folder to the server. You can use SFTP (like FileZilla), SCP, or Git to clone the repository onto your server.
+Navigate into the backend directory on the server: cd /path/to/backend
+Install dependencies: npm install
+Install production dependencies (these match the optimizations just added): npm install helmet compression
+3. Environment Variables
+Create a .env file on the server inside the backend folder and add your production credentials:
+
+env
+PORT=5000
+MONGODB_URI=your_mongodb_atlas_connection_string
+JWT_SECRET=a_very_long_secure_random_string_here
+JWT_EXPIRES_IN=24h
+CLOUDINARY_CLOUD_NAME=your_cloudinary_name
+CLOUDINARY_API_KEY=your_cloudinary_api
+CLOUDINARY_API_SECRET=your_cloudinary_secret
+CLIENT_ORIGIN=https://www.brandlina.com # important for CORS security
+4. Keep the Backend Alive with PM2
+If you just run npm start, the server will stop when you close the terminal. Instead, use PM2:
+
+Install PM2 globally: npm install -g pm2
+Start the backend: pm2 start src/server.js --name "brandlina-backend"
+Ensure it restarts on server reboot: pm2 startup and then run the command it outputs, finally pm2 save.
+🎨 Step 3: Frontend Deployment (React/Vite)
+Unlike the backend, the frontend does not need a Node.js runtime after it is built. It is compiled into static HTML, CSS, and JS files.
+
+1. Configure the API URL
+Before building, ensure your frontend knows how to reach the production backend API. Update your frontend .env file (or src/lib/apiClient.js) so that instead of fetching from http://localhost:5001, it points to your Hostinger domain (e.g., https://api.brandlina.com or https://brandlina.com/api).
+
+2. Build the Production Files
+Open up a terminal in your frontend directory on your local machine.
+Run the build command:
+bash
+npm run build
+Vite will bundle and minify all your code into a single dist/ folder. This dist/ folder contains the Optimized Code without removing anything for production.
+3. Upload to Hostinger
+Go to your Hostinger hPanel.
+Navigate to File Manager -> public_html (the root of your domain).
+Upload the contents of your newly created dist/ folder directly into public_html.
+Important for React Router: To prevent 404 errors when visitors refresh a page, create a .htaccess file inside public_html and paste the following:
+apache
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
+🌐 Step 4: Connecting Front & Back (Nginx Reverse Proxy)
+NOTE
+
+If you are using a standard Hostinger Shared Plan without SSH/VPS, you will need to map a subdomain (like api.yourdomain.com) strictly to a Node.js App created via the Hostinger cPanel "Node.js Applications" interface.
+
+If you are on a VPS, you will use Nginx to route traffic to both your frontend and your backend.
+
+Install Nginx: sudo apt install nginx
+Create an Nginx config file: sudo nano /etc/nginx/sites-available/brandlina
+Add a configuration that blocks external ports and serves everything on standard https/80. Example concept:
+Root / serves your public_html static React files.
+Route /api acts as a reverse proxy, forwarding requests to http://localhost:5000 (where PM2 is running your Express backend).
+Save, enable the site, and restart Nginx.
+🔐 Final Polish
+Go to Hostinger's hPanel and install an SSL Certificate (Let's Encrypt). Both your React frontend and your Express API must run securely on HTTPS in production to allow cookies and secure geolocation/microphone permissions.
+Validate Cloudinary paths (ensure your DNS doesn't block Cloudinary images).
+🏁 You're Done! Your optimized, highly scaleable MERN stack is fully live on Hostinger.
+
