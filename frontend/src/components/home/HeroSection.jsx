@@ -135,16 +135,7 @@ export function HeroSection({ hero }) {
             </div>
           </div>
 
-          <div className="mt-6 hidden items-center gap-4 rounded-2xl border border-white/80 bg-white/75 p-2 pr-6 shadow-lg backdrop-blur-xl md:mt-0 md:flex">
-            <div className="flex -space-x-2">
-              <div className="h-10 w-10 rounded-full border-2 border-white bg-gradient-to-br from-sky-200 to-blue-400" />
-              <div className="h-10 w-10 rounded-full border-2 border-white bg-gradient-to-br from-[#2563eb] to-[#1e40af]" />
-              <div className="h-10 w-10 rounded-full border-2 border-white bg-gradient-to-br from-[#14b8a6] to-teal-600" />
-            </div>
-            <div className="text-sm font-semibold text-[#334155]">
-              10+ Featured <br /> <span className="text-[#f59e0b]">★★★★★</span> 5/5
-            </div>
-          </div>
+
         </Motion.div>
 
         <Motion.div

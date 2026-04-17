@@ -1,8 +1,6 @@
 import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
-import helmet from "helmet";
-import compression from "compression";
 import morgan from "morgan";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -51,11 +49,6 @@ app.use(
     credentials: true,
   }),
 );
-// Production Optimizations
-app.use(helmet({
-  crossOriginResourcePolicy: false, // allow serving images via /uploads to frontend
-}));
-app.use(compression());
 
 app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ extended: true }));

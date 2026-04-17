@@ -164,10 +164,15 @@ export default function ServicesPage() {
             className="md:col-span-2 rounded-xl border border-slate-200 px-4 py-3"
           />
 
-          <label className="md:col-span-2 text-sm text-slate-600">
-            Upload image
-            <input type="file" accept="image/*" onChange={onFileChange} className="mt-2 block w-full" />
-          </label>
+          <div className="md:col-span-2 space-y-2">
+            <label className="text-sm font-medium leading-4 text-slate-900">Upload image</label>
+            <input 
+              type="file" 
+              accept="image/*" 
+              onChange={onFileChange} 
+              className="flex h-10 w-full rounded-xl border border-slate-200 bg-white p-0 pr-3 italic text-slate-500 shadow-sm transition-shadow file:me-3 file:h-full file:border-0 file:border-r file:border-solid file:border-slate-200 file:bg-transparent file:px-3 file:text-sm file:font-medium file:not-italic file:text-slate-900 focus-visible:border-blue-500 focus-visible:outline-none focus-visible:ring-[3px] focus-visible:ring-blue-500/20 disabled:cursor-not-allowed disabled:opacity-50" 
+            />
+          </div>
 
           {preview && (
             <img src={preview} alt="Preview" className="md:col-span-2 h-44 w-full rounded-xl border border-slate-200 object-cover" />

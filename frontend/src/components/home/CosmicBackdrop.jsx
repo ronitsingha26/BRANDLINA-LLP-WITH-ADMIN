@@ -309,12 +309,12 @@ export function CosmicBackdrop({ config = {} }) {
     beamWidth: 2,
     beamHeight: 15,
     beamNumber: 12,
-      lightColor: "#d7d7d7",
+    lightColor: "#d7d7d7",
     speed: 2,
     noiseIntensity: 1.75,
     scale: 0.2,
     rotation: 0,
-      backgroundColor: "#eef5fb",
+    backgroundColor: "#eef5fb",
     ...config,
   };
 
